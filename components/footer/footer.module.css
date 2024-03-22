@@ -1,5 +1,5 @@
 .footer {
-  @apply p-10 mt-10 border-t-2 border-t-primary-500 tracking-widest text-sm;
+  @apply p-10 mt-10 border-t-2 border-t-primary-500 tracking-widest;
 }
 
 .footer-item {
@@ -8,9 +8,6 @@
 
 .footer-item-title {
   @apply font-bold uppercase;
-}
-.icon {
-  @apply w-6
 }
 
 .icon-footer {

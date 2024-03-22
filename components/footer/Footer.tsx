@@ -5,11 +5,12 @@ import logo from '../../public/images/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCcAmex, faCcDinersClub, faCcMastercard, faCcVisa, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import style from './footer.module.css'
+import util from '../../styles/util.module.css'
 
 export default function Footer() {
   return (
     <footer id='footer' className={ style.footer}>
-      <div className='flex flex-col justify-center items-center gap-20 md:flex-row md:justify-around'>
+      <div className='flex flex-col justify-center items-center md:items-start gap-20 md:flex-row md:justify-around'>
         <div className={style['footer-item']}>
           <Image
             src={logo}
@@ -23,8 +24,8 @@ export default function Footer() {
           </div>
           {/* redes sociales */}
           <div className='flex gap-4'>
-            <Link target='_blank' href={'https://www.facebook.com/BonnyJoyas/'}><FontAwesomeIcon icon={faFacebook} className={ `${style.icon} text-blue-700`} /></Link>
-            <Link target='_blank' href={'https://www.instagram.com/bonnyjoyascatacaos/'}><FontAwesomeIcon icon={faInstagram} className={`${style.icon} text-[#DD2A7B]`}/></Link>
+            <Link target='_blank' href={'https://www.facebook.com/BonnyJoyas/'}><FontAwesomeIcon icon={faFacebook} className={ `${util.icon} text-blue-700`} /></Link>
+            <Link target='_blank' href={'https://www.instagram.com/bonnyjoyascatacaos/'}><FontAwesomeIcon icon={faInstagram} className={`${util.icon} text-[#DD2A7B]`}/></Link>
           </div>
         </div>
 

@@ -16,12 +16,14 @@ export default function LandingLayout({
  children: React.ReactNode;
 }) {
   return (
-    <div className="h-full w-full bg-white text-md">
-      <Navbar />
-      <div className="p-4 sm:mt-40 bg-white">
-        {children}
+    <div className="h-full w-full bg-white text-sm">
+      <div className="container my-24 mx-auto md:px-6">
+        <Navbar />
+        <div className="p-4 sm:mt-40 bg-white">
+          {children}
+        </div>
       </div>
-      <Footer/>
+        <Footer/>
     </div>
   );
 }

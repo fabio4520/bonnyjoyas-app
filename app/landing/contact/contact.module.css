@@ -1,0 +1,23 @@
+.label {
+  @apply font-semibold text-xs;
+}
+
+.input-container {
+  @apply mb-6 flex flex-col gap-1;
+}
+
+.input {
+  @apply p-3 rounded-md;
+}
+
+.textarea {
+  @apply p-5 rounded-md;
+}
+
+.contact-item {
+  @apply flex flex-col gap-3 items-center justify-center;
+}
+
+.icon {
+  @apply w-10;
+}
