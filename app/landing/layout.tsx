@@ -16,8 +16,10 @@ export default function LandingLayout({
 }) {
   return (
     <div className="h-lvh w-lvw bg-white text-md">
-      <Navbar/>
-      {children}
+      <Navbar />
+      <div className="p-4 sm:mt-44">
+        {children}
+      </div>
     </div>
   );
 }
