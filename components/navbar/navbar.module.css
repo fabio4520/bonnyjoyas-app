@@ -2,7 +2,6 @@
   @apply fixed top-0 left-0 right-0 z-50 flex flex-col items-center justify-center gap-4 p-4 bg-white shadow-md;
 }
 
-
 .nav-items {
   @apply flex gap-28 items-center justify-center;
 }

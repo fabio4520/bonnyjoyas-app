@@ -9,7 +9,7 @@ import style from './footer.module.css'
 export default function Footer() {
   return (
     <footer id='footer' className={ style.footer}>
-      <div className='flex justify-around'>
+      <div className='flex flex-col justify-center items-center gap-20 md:flex-row md:justify-around'>
         <div className={style['footer-item']}>
           <Image
             src={logo}

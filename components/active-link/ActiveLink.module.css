@@ -3,5 +3,5 @@
 }
 
 .active-link {
-  @apply text-primary-800 border-b-8 border-b-primary-700;
+  @apply text-primary-800 border-b-4 border-b-primary-700;
 }
