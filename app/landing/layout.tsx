@@ -1,3 +1,4 @@
+import Footer from "@/components/footer/Footer";
 import Navbar from "@/components/navbar/Navbar";
 import { Metadata } from "next";
 
@@ -20,6 +21,7 @@ export default function LandingLayout({
       <div className="p-4 sm:mt-44 bg-white">
         {children}
       </div>
+      <Footer/>
     </div>
   );
 }

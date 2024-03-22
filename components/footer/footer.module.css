@@ -1,0 +1,18 @@
+.footer {
+  @apply p-10 mt-10 border-t-2 border-t-primary-500 tracking-widest text-sm;
+}
+
+.footer-item {
+  @apply flex flex-col gap-4;
+}
+
+.footer-item-title {
+  @apply font-bold uppercase;
+}
+.icon {
+  @apply w-6
+}
+
+.icon-footer {
+  @apply w-16
+}
