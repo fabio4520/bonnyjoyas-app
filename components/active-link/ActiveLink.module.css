@@ -1,0 +1,7 @@
+.li {
+  @apply relative rounded-lg flex cursor-pointer items-center py-[10px] font-normal tracking-[.3rem] hover:text-primary-300 pl-5 pr-5;
+}
+
+.active-link {
+  @apply text-primary-800 border-b-8 border-b-primary-700;
+}
