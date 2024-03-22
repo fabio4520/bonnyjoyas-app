@@ -1,0 +1,6 @@
+.submit-button {
+  @apply rounded-md p-4 bg-primary-400
+}
+.submit-button:hover {
+  @apply bg-primary-300
+}

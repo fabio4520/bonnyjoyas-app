@@ -15,9 +15,9 @@ export default function LandingLayout({
  children: React.ReactNode;
 }) {
   return (
-    <div className="h-lvh w-lvw bg-white text-md">
+    <div className="h-full w-full bg-white text-md">
       <Navbar />
-      <div className="p-4 sm:mt-44">
+      <div className="p-4 sm:mt-44 bg-white">
         {children}
       </div>
     </div>
