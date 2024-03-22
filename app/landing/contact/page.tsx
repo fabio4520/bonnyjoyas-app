@@ -55,7 +55,7 @@ export default function Contact() {
                       <label htmlFor="phone" className={style.label}>Tel&eacute;fono</label>
                       <input name='phone' type="text" id="phone" className={style.input} required onChange={handleInputChange} value={formData.phone}/>
                     </div>
-                    <div className={`${style['input-container']} col-span-2`}>
+                    <div className={`${style['input-container']} md:col-span-2`}>
                       <label htmlFor="message" className={style.label}>Mensaje</label>
                       <textarea name='message' id="message" className={style.textarea} required onChange={handleInputChange} value={formData.lastname}/>
                     </div>
@@ -73,7 +73,7 @@ export default function Contact() {
             <div className='flex items-center justify-center mb-20'>
               <span className='text-center font-bold text-lg uppercase'>Contáctanos</span>
             </div>
-            <div className='flex items-center gap-20 text-lg'>
+            <div className='flex flex-col md:flex-row md:items-center gap-20 md:text-lg'>
               {
                 contactItems.map(item => (
                   <div key={item.title} className={ style['contact-item']}>
