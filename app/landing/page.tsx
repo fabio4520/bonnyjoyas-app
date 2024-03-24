@@ -23,7 +23,7 @@ export default function Landing() {
       <div id='section1' className='flex flex-wrap items-center justify-around'>
         <div className='flex flex-col md:w-1/2 gap-8 items-center justify-center text-center pt-14'>
           <p className='font-bold'>EXCLUSIVIDAD, CALIDAD, ELEGANCIA Y DISEÑO</p>
-          <p>Descubre nuestras piezas más codiciadas al mejor precio del mercado. Aquí encontrarás los mejores descuentos en todas nuestras colecciones. “Regala Momentos Inolvidables”</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium suscipit nemo dicta saepe, perspiciatis voluptates dolorum dolore tenetur magni numquam natus? Earum, maiores similique dolores quis tempora incidunt. Doloribus, eius!</p>
           <Button className='uppercase font-bold md:w-1/2'><Link href={'/shop'}>Descubre la colección</Link></Button>
         </div>
         <Image

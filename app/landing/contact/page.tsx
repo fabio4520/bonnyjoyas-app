@@ -1,9 +1,9 @@
 'use client';
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClock, faEnvelope, faMap, faPhone } from '@fortawesome/free-solid-svg-icons';
 import style from './contact.module.css'
 import Button from '@/components/button/Button';
+import contactItems from '@/data/contact';
 
 const initialStateRequestApi = {
   name: '',
@@ -13,12 +13,6 @@ const initialStateRequestApi = {
   message: ''
 };
 
-const contactItems = [
-  {icon: faPhone, title: "Teléfono", description: "(51) 969915364"},
-  {icon: faEnvelope, title: "Email", description: "email@example.com"},
-  {icon: faMap, title: "Dirección Principal", description: "Asociación de artesanos Catacaos Peru"},
-  {icon: faClock, title: "Horarios", description: "Lunes-Sábado 8:00am - 8:00pm"},
-]
 
 export default function Contact() {
   const [formData, setFormData] = useState(initialStateRequestApi);
