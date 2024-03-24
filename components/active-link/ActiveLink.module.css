@@ -1,5 +1,5 @@
 .li {
-  @apply relative rounded-lg flex cursor-pointer items-center py-[10px] font-normal tracking-[.3rem] hover:text-primary-300 pl-5 pr-5;
+  @apply relative rounded-lg flex cursor-pointer items-center py-[10px] font-normal tracking-[.3rem] hover:text-primary-300 pl-5 pr-5 mt-10 md:mt-0;
 }
 
 .active-link {
