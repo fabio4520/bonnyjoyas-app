@@ -1,15 +1,11 @@
 'use client';
 import React, { useState } from 'react';
-import { ActiveLink } from '../active-link/ActiveLink';
 import Image from 'next/image';
 import logo from '../../public/images/logo.png';
 import style from './navbar.module.css';
+import { AnimatePresence, motion } from 'framer-motion';
+import NavItems from './NavItems';
 
-const navItems = [
-  { path: '/landing', text: 'Inicio' },
-  { path: '/landing/about', text: 'Nosotros' },
-  { path: '/landing/contact', text: 'Contáctanos' },
-];
 
 export default function Navbar() {
   const [showItems, setShowItems] = useState(false);
@@ -29,7 +25,6 @@ export default function Navbar() {
         />
         <button
           onClick={toggleItems}
-          aria-expanded={showItems ? 'true' : 'false'}
           type="button"
           className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-primary-400 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-primary-700 dark:focus:ring-primary-600"
         >
@@ -39,11 +34,9 @@ export default function Navbar() {
           </svg>
         </button>
       </div>
-      <div className={`${style['nav-items']} ${showItems ? '': 'hidden'} transition-opacity duration-700 ease-in-out`}>
-        {navItems.map(navItem => (
-          <ActiveLink key={navItem.path} {...navItem} toggleItems={toggleItems} />
-        ))}
-      </div>
+      <AnimatePresence>
+        <NavItems showItems={ showItems} toggleItems={toggleItems}/>
+      </AnimatePresence>
     </nav>
   );
 }

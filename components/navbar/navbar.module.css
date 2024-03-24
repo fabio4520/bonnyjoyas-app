@@ -1,5 +1,5 @@
 .nav {
-  @apply fixed md:h-max top-0 left-0 right-0 z-50 flex flex-col items-center justify-center gap-4 p-5 bg-white shadow-md;
+  @apply fixed md:h-max top-0 left-0 right-0 z-50 flex flex-col items-center md:justify-center gap-4 p-5 bg-white shadow-md;
 }
 
 .nav-items {

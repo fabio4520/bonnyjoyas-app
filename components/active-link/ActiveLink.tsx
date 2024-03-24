@@ -15,7 +15,7 @@ export const ActiveLink = ({ path, text, toggleItems }: Props) => {
   };
 
   const pathName = usePathname();
-  let styles = `${style.li} `
+  let styles = `${style.link} `
   if (path == '/landing') {
     styles += `${(pathName == path) && style['active-link']}`
   } else {

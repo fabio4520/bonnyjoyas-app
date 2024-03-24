@@ -1,6 +1,7 @@
 import Footer from "@/components/footer/Footer";
 import Navbar from "@/components/navbar/Navbar";
 import { Metadata } from "next";
+import Template from "./template";
 
 export const metadata: Metadata = {
   title: "Bonny Joyas",
@@ -20,7 +21,7 @@ export default function LandingLayout({
       <div className="container my-24 mx-auto md:px-6">
         <Navbar />
         <div className="p-4 mt-24 md:mt-40 bg-white">
-          {children}
+        <Template>{children}</Template>
         </div>
       </div>
         <Footer/>
