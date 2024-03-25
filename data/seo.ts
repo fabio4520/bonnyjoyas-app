@@ -16,19 +16,19 @@ export const landingPageSeo = {
 }
 
 export const landingAboutSeo = {
-  title: "Bonny Joyas: Joyería en Piura | Joyas de Plata y Oro en Perú",
-  description: "Descubre la mejor joyería en Piura con Bonny Joyas. Encuentra joyas de plata y oro de la más alta calidad en nuestra tienda online. Envíos a todo Perú.",
+  title: "Descubre la Historia de Bonny Joyas en Piura | Joyería Artesanal y de Calidad en Perú",
+  description: "Conoce la historia y la experiencia detrás de Bonny Joyas en Piura. Descubre nuestra tradición joyera, nuestro compromiso con la calidad y la excelencia en el diseño de joyas artesanales en Perú.",
   keywords: [
-    "Joyería en Piura",
-    "Joyas de plata y oro en Piura",
-    "Tienda de joyas en Piura",
-    "Joyería online en Piura",
-    "Comprar joyas en Piura",
-    "Anillos de compromiso en Piura",
-    "Collares de plata en Piura",
-    "Pulseras de oro en Piura",
-    "Joyería fina en Piura",
-    "Regalos de joyería en Piura",
+    "Historia de Bonny Joyas",
+    "Experiencia en joyería",
+    "Calidad en joyas en Piura",
+    "Artesanos de joyería en Piura",
+    "Tradición joyera en Piura",
+    "Compromiso con la calidad",
+    "Diseño de joyas en Piura",
+    "Proceso artesanal de joyería",
+    "Valores de Bonny Joyas",
+    "Compromiso con la excelencia",
   ],
 }
 

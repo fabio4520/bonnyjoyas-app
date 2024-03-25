@@ -2,29 +2,40 @@ import React from 'react'
 import aboutImage from '../../../public/images/about/about.png'
 import Image from 'next/image'
 import { Metadata } from 'next';
-import { keywordsAbout } from '@/data/seo';
+import { landingAboutSeo } from '@/data/seo';
+import DivTransition from '@/components/transitions/DivTransition';
 
 export const metadata: Metadata = {
-  title: "Página Nosotros de Bonny Joyas",
-  description: "Conoce sobre Bonny Joyas y su historia",
-  keywords: keywordsAbout
+  title: landingAboutSeo.title,
+  description: landingAboutSeo.description,
+  keywords: landingAboutSeo.keywords,
 };
 
 export default function About() {
   return (
     <main className='flex flex-wrap justify-center gap-28 p-10'>
-      <div className='flex flex-col gap-10'>
-        <h1 className='font-bold text-2xl tracking-widest'>¿Qui&eacute;nes somos?</h1>
-        <div className='max-w-xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quos minus voluptatum optio, esse asperiores quod modi. Vitae, quia. Qui a inventore in dolor exercitationem voluptas reprehenderit sapiente doloremque perferendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ipsum dolorem tenetur vitae illum non adipisci, molestiae culpa voluptates aperiam praesentium optio porro in ipsam beatae aliquam itaque officia repellat. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur autem non impedit facere unde perspiciatis similique facilis mollitia soluta cupiditate. Repellat sint quaerat blanditiis veritatis recusandae numquam architecto, rerum animi.</div>
-      </div>
-      <div>
+      <DivTransition
+        initial={{ x: -200, opacity: 0 }}
+        transition={{ ease: 'easeInOut', duration: 1 }}
+        className='flex flex-col gap-10'
+      >
+        <h1 className='font-bold text-2xl tracking-widest'>¿Quiénes somos?</h1>
+        <div className='max-w-xl'>Bonny Joyas es una empresa familiar con más de 10 años de experiencia en la creación de joyas artesanales de alta calidad. Nuestro compromiso con la excelencia y la belleza se refleja en cada una de nuestras piezas, diseñadas y elaboradas por nuestros expertos artesanos en Piura, Perú.</div>
+        <div className='max-w-xl'>En Bonny Joyas, valoramos la tradición joyera y nos esforzamos por mantener viva la artesanía peruana. Cada joya que creamos es única, con un diseño exclusivo y una calidad excepcional que la convierten en una verdadera obra de arte.</div>
+        <div className='max-w-xl'>Nuestra misión es ofrecer a nuestros clientes joyas que no solo sean hermosas, sino también significativas. Queremos ser parte de momentos especiales en la vida de las personas, creando piezas que perduren en el tiempo y se conviertan en símbolos de amor, compromiso y belleza.</div>
+      </DivTransition>
+      <DivTransition
+        initial={{ x: 200, opacity: 0 }}
+        transition={{ ease: 'easeInOut', duration: 1 }}
+        className=''
+      >
         <Image
           src={aboutImage}
-          alt=''
+          alt='Imagen de Bonny Joyas'
           width={400}
           height={500}
         />
-      </div>
+      </DivTransition>
     </main>
   )
 }
