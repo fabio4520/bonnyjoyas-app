@@ -1,6 +1,14 @@
 import React from 'react'
 import aboutImage from '../../../public/images/about/about.png'
 import Image from 'next/image'
+import { Metadata } from 'next';
+import { keywordsAbout } from '@/data/seo';
+
+export const metadata: Metadata = {
+  title: "Página Nosotros de Bonny Joyas",
+  description: "Conoce sobre Bonny Joyas y su historia",
+  keywords: keywordsAbout
+};
 
 export default function About() {
   return (

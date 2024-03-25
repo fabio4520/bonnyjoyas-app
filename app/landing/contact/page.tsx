@@ -1,26 +1,18 @@
-'use client';
-import React, { useState } from 'react'
+import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import style from './contact.module.css'
-import Button from '@/components/button/Button';
 import contactItems from '@/data/contact';
+import { Metadata } from 'next';
+import { keywordsContact } from '@/data/seo';
+import FormContact from './FormContact';
 
-const initialStateRequestApi = {
-  name: '',
-  lastname: '',
-  email: '',
-  phone: '',
-  message: ''
+export const metadata: Metadata = {
+  title: "Página Contacto de Bonny Joyas",
+  description: "Contáctanos y disfruta de la joyería fina en oro y plata.",
+  keywords: keywordsContact
 };
 
-
 export default function Contact() {
-  const [formData, setFormData] = useState(initialStateRequestApi);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
 
   return (
     <div className=''>
@@ -31,31 +23,7 @@ export default function Contact() {
           <div className='block rounded-lg bg-light-200 px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] md:py-16 md:px-12 -mt-[80px] backdrop-blur-[30px]'>
             <div className="flex flex-wrap">
               <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:px-3 lg:px-6">
-                <form className='w-full'>
-                  <div className='grid grid-cols-1 md:grid-cols-2 gap-x-10'>
-                    <div className={style['input-container']}>
-                      <label htmlFor="name" className={style.label}>Nombre</label>
-                      <input name='name' type="text" id="name" className={style.input} required onChange={handleInputChange} value={formData.name}/>
-                    </div>
-                    <div className={style['input-container']}>
-                      <label htmlFor="lastname" className={style.label}>Apellidos</label>
-                      <input name='lastname' type="text" id="lastname" className={style.input} required onChange={handleInputChange} value={formData.lastname}/>
-                    </div>
-                    <div className={style['input-container']}>
-                      <label htmlFor="email" className={style.label}>Email</label>
-                      <input name='email' type="text" id="email" className={style.input} required onChange={handleInputChange} value={formData.email}/>
-                    </div>
-                    <div className={style['input-container']}>
-                      <label htmlFor="phone" className={style.label}>Tel&eacute;fono</label>
-                      <input name='phone' type="text" id="phone" className={style.input} required onChange={handleInputChange} value={formData.phone}/>
-                    </div>
-                    <div className={`${style['input-container']} md:col-span-2`}>
-                      <label htmlFor="message" className={style.label}>Mensaje</label>
-                      <textarea name='message' id="message" className={style.textarea} required onChange={handleInputChange} value={formData.lastname}/>
-                    </div>
-                  </div>
-                  <Button className='w-full font-bold font-md uppercase'>Enviar</Button>
-                </form>
+                <FormContact/>
               </div>
             </div>
           </div>
