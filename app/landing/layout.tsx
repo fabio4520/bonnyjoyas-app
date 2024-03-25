@@ -18,13 +18,15 @@ export default function LandingLayout({
 }) {
   return (
     <div className="h-full w-full bg-white text-sm">
+      <Navbar />
       <div className="container my-24 mx-auto md:px-6">
-        <Navbar />
-        <div className="p-4 mt-24 md:mt-40 bg-white">
-        <Template>{children}</Template>
-        </div>
+        <Template
+          className="p-4 mt-24 md:mt-40 bg-white overflow-hidden"
+        >
+          {children}
+        </Template>
       </div>
-        <Footer/>
+      <Footer/>
     </div>
   );
 }
