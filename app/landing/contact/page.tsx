@@ -3,13 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import style from './contact.module.css'
 import contactItems from '@/data/contact';
 import { Metadata } from 'next';
-import { keywordsContact } from '@/data/seo';
+import { landingContactSeo } from '@/data/seo';
 import FormContact from './FormContact';
 
 export const metadata: Metadata = {
-  title: "Página Contacto de Bonny Joyas",
-  description: "Contáctanos y disfruta de la joyería fina en oro y plata.",
-  keywords: keywordsContact
+  title: landingContactSeo.title,
+  description: landingContactSeo.description,
+  keywords: landingContactSeo.keywords,
 };
 
 export default function Contact() {
