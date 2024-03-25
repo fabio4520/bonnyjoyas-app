@@ -2,7 +2,6 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { Metadata } from 'next';
-import { KEYWORDS } from '@/data/seo';
 
 export default function Home() {
   const router = useRouter();
