@@ -1,7 +1,10 @@
 'use client';
-import React, { useState } from 'react'
+import React, { FormEvent, useState } from 'react'
 import Button from '@/components/button/Button';
 import style from './contact.module.css'
+import { sendEmail } from '@/lib/sendEmail';
+import { showToast } from '@/app/helpers/toastService';
+import LoadingComponent from '@/components/loading/Loading';
 
 const initialStateRequestApi = {
   name: '',
@@ -13,14 +16,31 @@ const initialStateRequestApi = {
 
 export default function FormContact() {
   const [formData, setFormData] = useState(initialStateRequestApi);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setIsLoading(true);
+    try {
+      // await sendEmail(formData);
+      showToast("Correo enviado exitosamente!", "success")
+    } catch (error: any) {
+      showToast(error, "error")
+    } finally {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 500);
+    }
+  }
+
   return (
-    <form className='w-full'>
+    <form className='w-full' onSubmit={handleSubmit}>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-x-10'>
         <div className={style['input-container']}>
           <label htmlFor="name" className={style.label}>Nombre</label>
@@ -40,10 +60,18 @@ export default function FormContact() {
         </div>
         <div className={`${style['input-container']} md:col-span-2`}>
           <label htmlFor="message" className={style.label}>Mensaje</label>
-          <textarea name='message' id="message" className={style.textarea} required onChange={handleInputChange} value={formData.lastname}/>
+          <textarea name='message' id="message" className={style.textarea} required onChange={handleInputChange} value={formData.message}/>
         </div>
       </div>
-      <Button className='w-full font-bold font-md uppercase'>Enviar</Button>
+      <Button type='submit' className='w-full font-bold font-md uppercase'>Enviar</Button>
+
+      {/* Loading Component */}
+      {
+        isLoading ?
+          // <div>Cargando...</div>:
+          <LoadingComponent isChild/>:
+          ""
+      }
     </form>
   )
 }

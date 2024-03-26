@@ -5,6 +5,7 @@ import contactItems from '@/data/contact';
 import { Metadata } from 'next';
 import { landingContactSeo } from '@/data/seo';
 import FormContact from './FormContact';
+import contactImage from '../../../public/images/contact/contact-hero.jpg'
 
 export const metadata: Metadata = {
   title: landingContactSeo.title,
@@ -17,7 +18,9 @@ export default function Contact() {
   return (
     <div className=''>
       <section className='mb-10'>
-        <div className="relative h-[400px] overflow-hidden bg-cover bg-[50%] bg-no-repeat bg-[url('https://scontent.flim9-1.fna.fbcdn.net/v/t39.30808-6/386698474_795714305895776_8375257025583055373_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGhuTmgf5bb2wk3oR1SwIuVryBbug_4kf-vIFu6D_iR_zlZDsM4tTnEnbH55MyXixZcO1ctCx4f7ySMwvcfrkrM&_nc_ohc=ZvJ5FCZSmZEAX_BRFHh&_nc_ht=scontent.flim9-1.fna&oh=00_AfDaJ8kplLRlVu8nqMoY8ytjOs9E7Am4cqZvYVD4Mc1NZw&oe=66019915')]">
+        <div className={`relative h-[400px] overflow-hidden bg-cover bg-[50%] bg-no-repeat`} style={{
+        backgroundImage: `url('/images/contact/contact-hero.jpg')`
+        }}>
         </div>
         <div className="container px-6 md:px-12">
           <div className='block rounded-lg bg-light-200 px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] md:py-16 md:px-12 -mt-[80px] backdrop-blur-[30px]'>
