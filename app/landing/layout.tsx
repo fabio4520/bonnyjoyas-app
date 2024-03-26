@@ -2,6 +2,8 @@ import Footer from "@/components/footer/Footer";
 import Navbar from "@/components/navbar/Navbar";
 import { Metadata } from "next";
 import Template from "./template";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export const metadata: Metadata = {
   title: "Bonny Joyas",
@@ -19,6 +21,7 @@ export default function LandingLayout({
 }) {
   return (
     <div className="h-full w-full bg-white text-sm">
+      <ToastContainer/>
       <Navbar />
       <div className="container my-24 mx-auto md:px-6">
         <Template
