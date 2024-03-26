@@ -28,7 +28,7 @@ export default function FormContact() {
     e.preventDefault();
     setIsLoading(true);
     try {
-      // await sendEmail(formData);
+      await sendEmail(formData);
       showToast("Correo enviado exitosamente!", "success")
     } catch (error: any) {
       showToast(error, "error")
